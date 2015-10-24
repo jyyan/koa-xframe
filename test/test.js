@@ -1,7 +1,7 @@
 import request from 'supertest';
 import {expect} from 'chai';
 import Koa from 'koa';
-import xFrame from '..';
+import xFrame from '../src';
 
 describe('koa-xframe', () => {
   it(`should set X-Frame-Options to 'DENY' by default`, done => {
