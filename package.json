@@ -2,11 +2,14 @@
   "name": "koa-xframe",
   "version": "0.1.0",
   "description": "X-Frame-Options HTTP response header utility for Koa",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
+    "clean": "rimraf lib coverage",
     "test": "NODE_ENV=test ./node_modules/.bin/_mocha --compilers js:babel/register",
     "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --compilers js:babel/register",
-    "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --compilers js:babel/register"
+    "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --compilers js:babel/register",
+    "build": "babel ./src --out-dir ./lib",
+    "prepublish": "npm run clean && npm run build"
   },
   "author": "Pierre Brouca <pierre.brouca@icloud.com> (https://github.com/broucz)",
   "license": "MIT",
@@ -28,6 +31,7 @@
     "istanbul": "^0.4.0",
     "koa": "^2.0.0 || ^2.0.0-alpha.1",
     "mocha": "^2.3.3",
+    "rimraf": "^2.4.3",
     "supertest": "^1.1.0"
   },
   "engines": {
