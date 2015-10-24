@@ -36,8 +36,5 @@
   },
   "engines": {
     "node": ">= 4"
-  },
-  "files": [
-    "index.js"
-  ]
+  }
 }
