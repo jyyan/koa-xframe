@@ -8,8 +8,6 @@
 
 [X-Frame-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options) HTTP response header utility for Koa.
 
-__:heavy_exclamation_mark: This middleware is design around the new Koa `async (ctx, next) => middleware` signature (+/- Koa v2.0.0)__
-
 ## Installation
 
 ```
