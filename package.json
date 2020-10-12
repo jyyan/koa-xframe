@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.2.0",
   "description": "X-Frame-Options HTTP response header utility for Koa",
-  "main": "index.js",
+  "main": "release/index.js",
   "scripts": {
     "clean": "rimraf release coverage",
     "test": "NODE_ENV=test ./node_modules/.bin/_mocha --compilers js:babel/register",
