@@ -9,7 +9,7 @@
     "test": "NODE_ENV=test ./node_modules/.bin/_mocha --compilers js:babel/register",
     "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --compilers js:babel/register",
     "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --compilers js:babel/register",
-    "build": "babel ./src --out-dir ./release"
+    "build": "babel src -d release"
   },
   "author": "Pierre Brouca <pierre.brouca@icloud.com> (https://github.com/broucz)",
   "license": "MIT",
@@ -26,8 +26,9 @@
     "X-Frame-Options"
   ],
   "devDependencies": {
-    "babel": "^5.8.23",
-    "babel-runtime": "^5.8.25",
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
     "chai": "^3.4.0",
     "istanbul": "^0.4.0",
     "koa": "^2.0.0 || ^2.0.0-alpha.1",
@@ -37,5 +38,8 @@
   },
   "engines": {
     "node": ">= 4"
+  },
+  "dependencies": {
+    "regenerator-runtime": "^0.13.7"
   }
 }
